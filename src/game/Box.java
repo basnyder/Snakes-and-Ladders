@@ -11,4 +11,5 @@ package game;
  */
 public interface Box {
 	public void landedOn();
+	public String toString();
 }

@@ -11,10 +11,27 @@ package game;
  */
 public class Player {
 	public int pos;
-	
+	public int id;
 	
 	public Player() {
+		this(0);
+	}
+	
+	public Player(int id) {
 		this.pos = 0;
+		this.id = id;
+	}
+	
+	public String toString() {
+		return "player " + id + ",\tpos: " + pos;
+	}
+	
+	public void move(int spaces) {
+		pos += spaces;
+	}
+	
+	public void moveTo(int space) {
+		pos = space;
 	}
 	
 }
