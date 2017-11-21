@@ -10,6 +10,6 @@ package game;
  * @author Brett
  */
 public interface Box {
-	public void landedOn();
+	public void landedOn(Player p);
 	public String toString();
 }

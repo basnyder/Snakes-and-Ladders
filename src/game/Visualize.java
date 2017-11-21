@@ -23,10 +23,11 @@ public class Visualize extends PApplet {
         frameRate(100);
 		b = new Board(this);
 		init();
+		drawBoard();
     }
     
     public void draw() {
-        background(0);
+		background(0);
 		drawBoard();
     }
 	
@@ -40,19 +41,27 @@ public class Visualize extends PApplet {
 	}
 	
 	public void rollDice() {
-		
+		b.takeTurn((int)(Math.random()*10)+1);
 	}
     
     public void keyPressed() {
-        if (key == 'n' || key == 'N') {
-            setup();
-        }
+        /*if (Character.isDigit(key)) {
+			System.out.println();
+			b.takeTurn(key-'0');
+        }*/
         switch (key) {
             case 'r':
             case 'R':
+				//restart
                 init();
                 break;
+			case 'n':
+            case 'N':
+				//new game
+                setup();
+                break;
             case ' ':
+				//role dice
                 rollDice();
                 break;
             /*

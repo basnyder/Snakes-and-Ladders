@@ -34,4 +34,8 @@ public class Player {
 		pos = space;
 	}
 	
+	public int getBox() {
+		return pos+1;
+	}
+	
 }
